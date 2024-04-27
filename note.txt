@@ -1,0 +1,132 @@
+npm init -y
+change main from index.js with server.js
+add script for start
+
+npm i express
+npm i nodemon and then added script "server": "nodemon server.js" so we can just use "npm run server"
+
+using require is not the ES6 way, so added "type": module
+
+created a .env to store all confidential information to secure and not been exposed to the public.
+install npm i dotenv for using this and config it and access by process.env.VALUE
+
+start using mongodb atlas cloud -> create new shared cluseter -> create new database and collection
+crete user id and password and whitelist IP 0.0.0.0/0
+for connect taken the conneciton string and add in .env and also add it in compass so no need to open atlas web again
+
+for access the mongodb database we use mongoose bcz it provides more control "npm i mongoose" and create config/db.js for all connection stuff
+
+install morgan, Morgan is a Node.js middleware that logs HTTP requests and errors. It is a great tool for debugging and creating log files,it shows http errors and API requests direcly to console
+npm i morgan
+
+installing bcrypt for password hashing
+npm install bcrypt
+
+for MVC we created
+controllers
+helpers
+middlewares
+
+
+After creating the resgister route we create a login route for we use the jsonwebtoken
+npm i jsonwebtoken
+we use the jsonwebtoken for more sucure environment
+
+
+after create registor from we are installing cors and concurrently
+npm i concurrently cors
+
+after 4:20
+install the slugify library used to replace blank space or underscore
+npm i slugify
+
+create model for categories categoryModel
+and routes as categoryRoute.js and controller as categoryController.js
+create CRUD for categories
+
+create model for prducts productModel
+and routes as productRoute.js and controller as productController.js
+create CRUD for products
+
+-photo cant be access direcltly in products so using one library
+-npm i express-formidable
+-used in in productRoute.js as a middleware.
+
+
+working of pagination from server side on 7:28
+
+at 9:40 for payment Gateway, i have created account at braintree and add keys in .env file
+now dowload few NPM packages: 
+1. npm i braintree in server
+2. npm i braintree-web-drop-in-react in client
+
+
+now create a payment gateaway in cotroller following documantaion
+and create a new model productModal to store orders products
+
+
+
+
+--------------------
+
+created react app using:
+npx create-react-app client
+
+
+load google fonts
+
+create 2 folders inside src: 
+1. components
+2. pages
+3. components/layout/Layout.js
+4. components/layout/Header.js
+
+install react router for routing in react
+npm i react-router-dom
+
+create pages in pages
+
+for adding icon using
+
+for making it seo friendly we use react-helmet
+npm i react-helmet
+
+we are using the axios to use http client so this best package for nodejs communication in react
+npm i axios
+
+for create toast using
+npm i react-toastify 
+tostify not workking so using hot-toast
+npm install react-hot-toast
+
+we are using concurrntly to run both node and react in a single command
+npm i concurrently
+
+now for manage states globbaly we are now using the context api, in comes with react so not nned to dowload 
+and create folder in src called context and auth.js
+
+** this created a lil doubt on 3:22 to create a private route folder in components/Route/Private.js
+this created for protected access only for Dashboard.js page to make it protected
+
+--
+
+after 4:20
+and after creating all private routes for admin Dashboard and user Dashboard and its menus,
+now need to create category api and product api 
+so creating a model and API in backend
+
+to CRUD the Categoty we use the ant Design library to create modal
+https://ant.design/docs/react/introduce
+npm install antd
+
+--
+
+After 8:17
+we are creating categories page, in which we are rendering the category using category API or 
+we can create a custom hook/reusable hook and wherever category needed, we will use it.
+so we are doing it in header currently, in future we can replace all the cateogry api calls wherever needed.
+
+src/hooks
+
+
+installed npm i moment to deal with date and time in orders
